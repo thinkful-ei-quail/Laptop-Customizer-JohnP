@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import ShoppingCart from './ShoppingCart/ShoppingCart';
-import TotalInCart from './ShoppingCart/TotalInCart';
 import Customizer from './Customizer/Customizer';
 
 
@@ -77,14 +76,10 @@ class App extends Component {
             <h2>Your cart</h2>
 
             <ShoppingCart
+              total={total}
               USCurrencyFormat={this.USCurrencyFormat}
               state={this.state}
             />
-
-            <TotalInCart total={total}
-              USCurrencyFormat={this.USCurrencyFormat}
-            />
-
           </section>
         </main>
       </div>

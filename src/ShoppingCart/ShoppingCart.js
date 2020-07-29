@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PartInCart from './PartInCart';
 import './ShoppingCart.css';
+import TotalInCart from './TotalInCart';
 
 
 export default class ShoppingCart extends Component {
@@ -23,6 +24,10 @@ export default class ShoppingCart extends Component {
     return (
       <>
         {cartSum}
+
+        <TotalInCart total={this.props.total}
+              USCurrencyFormat={this.props.USCurrencyFormat}
+            />
       </>
     )
   }
